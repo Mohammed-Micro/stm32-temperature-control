@@ -9,6 +9,9 @@ INFILES  := src/main.c src/startup.s
 ifneq (,$(findstring USEGPIODRIVER,$(DEFINES)))
 	INFILES := $(INFILES) src/stm32f103_gpio.c
 endif
+ifneq (,$(findstring USETIMDRIVER,$(DEFINES)))
+	INFILES := $(INFILES) src/stm32f103_tim.c
+endif
 
 all : proj.hex proj.bin
 .PHONY : all
