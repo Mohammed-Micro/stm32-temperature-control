@@ -1,6 +1,5 @@
-#include "stm32f103.h"
+#include "stm32f103_tim.h"
 
-extern uint32_t TIM_CK;
 void tim_pwm_init(TIM_TypeDef *TIMx, uint8_t channel, uint64_t pwm_mode, uint32_t period_us, uint8_t duty_percent)
 {
 	TIMx->ARR = TIM_CK/1000000*period_us;

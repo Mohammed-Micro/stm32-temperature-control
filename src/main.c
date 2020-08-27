@@ -1,5 +1,4 @@
 #include "stm32f103.h"
-#include "stm32f103_tim.h"
 
 int main(void)
 {	

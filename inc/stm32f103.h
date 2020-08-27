@@ -215,5 +215,8 @@ typedef struct
 #ifdef USEGPIODRIVER
 #include "stm32f103_gpio.h"
 #endif
+#ifdef USETIMDRIVER
+#include "stm32f103_tim.h"
+#endif
 
 #endif
